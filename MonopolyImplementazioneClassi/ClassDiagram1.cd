@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MonopolyImplementazioneClassi.Proprieta">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAIAAIAAAAAAA=</HashCode>
+      <FileName>Proprieta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonopolyImplementazioneClassi.Casella">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Casella.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonopolyImplementazioneClassi.Banca">
+    <Position X="9.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Banca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonopolyImplementazioneClassi.Pedina">
+    <Position X="0.5" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AACQABEAkAAAAAAAAAQAEAAAAAAAAAAAAgYAAAAAAAA=</HashCode>
+      <FileName>Pedina.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
