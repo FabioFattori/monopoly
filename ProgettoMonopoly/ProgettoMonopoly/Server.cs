@@ -143,18 +143,25 @@ namespace ProgettoMonopoly
             {
                 while (true)
                 {
-                    if (Socket.Available != 0)
+                    try
                     {
-                        // Ricezione
-                        byte[] dati = new byte[1024];
-                        int ricevuto = Socket.ReceiveFrom(dati, ref _endPointLocale);
+                        if (Socket.Available != 0)
+                        {
+                            // Ricezione
+                            byte[] dati = new byte[1024];
+                            int ricevuto = Socket.ReceiveFrom(dati, ref _endPointLocale);
 
-                        // Decodifica
-                        string messaggioRicezione = Encoding.ASCII.GetString(dati, 0, ricevuto);
+                            // Decodifica
+                            string messaggioRicezione = Encoding.ASCII.GetString(dati, 0, ricevuto);
 
-                        RispostaServer(messaggioRicezione);
+                            RispostaServer(messaggioRicezione);
+                        }
+                        Thread.Sleep(1);
                     }
-                    Thread.Sleep(1);
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
                 }
 
             });
@@ -204,7 +211,14 @@ namespace ProgettoMonopoly
                 {
                     
                 }
+            }else if(messaggioRicezione.Contains("ERR tmu"))
+            {
+                throw new Exception("sono già presenti 4 giocatori nella lobby");
+            }else if(messaggioRicezione.Contains("ERR dn"))
+            {
+                throw new Exception("è già presente un giocatore con quel nome nella lobby");
             }
+
             //implementa
         }
 
